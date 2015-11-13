@@ -1,3 +1,7 @@
+{% comment %}
+    This File should be located in templates/widgets/cms/
+{% endcomment %}
+
 <div class="custom-widget-twitter-feed">
     {% comment %}
         Dump with widget information into a Div using a data attribute so it can be accessed by JavaScript

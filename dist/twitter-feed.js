@@ -1,3 +1,8 @@
+/**
+    This file should be located in scripts/widgets/
+**/
+
+
 define(['modules/jquery-mozu', 'vendor/codebird'],
     function ($) {
 
@@ -97,7 +102,7 @@ define(['modules/jquery-mozu', 'vendor/codebird'],
             /**
              * Mozu Widget Pattern -- grab the DOM where we've dumped out the widget configuration
              * so it can be accessed dynamically by JavaScript
-             */
+             **/
             return $('[data-' + this.widgetDataKey + ']').data(this.widgetDataKey);
         };
 
@@ -128,23 +133,14 @@ define(['modules/jquery-mozu', 'vendor/codebird'],
 
             /**
              * Removes RT link to original tweet
-             */
+             **/
             if (richText.indexOf('RT') === 0 && richText.lastIndexOf('https') > 0) {
                 richText = richText.substring(0, richText.lastIndexOf('https'));
             }
 
             /**
-             * Removes link to original tweet
-             */
-            // if (tweet.entitties.hasOwnProperty(media)) {
-            //     if (richText.search(new RegExp(tweet.entities.media.url, "i"))) {
-            //         richText = richText.substring(0, richText.search(new RegExp(tweet.entities.media.url, "i")));
-            //     }
-            // }
-
-            /**
              * Hyperlinks URLs
-             */
+             **/
 
             if (urls.length > 0) {
 
@@ -169,7 +165,7 @@ define(['modules/jquery-mozu', 'vendor/codebird'],
 
             /**
              * Hyperlinks handles
-             */
+             **/
 
             if (users.length > 0) {
 
@@ -194,7 +190,8 @@ define(['modules/jquery-mozu', 'vendor/codebird'],
 
             /**
              * Hyperlinks hashtags
-             */
+             **/
+
             if (hashtags.length > 0) {
 
                 hashtags.forEach(function(hashtag) {
@@ -216,14 +213,14 @@ define(['modules/jquery-mozu', 'vendor/codebird'],
                 });
             }
 
-            var card = $('<div>').attr('class', 'card'),
-                bg = $('<div>').attr('class', 'user-bg'),
-                img = $('<img>', { src: tweet.user.profile_image_url }).attr('class', 'user-img'),
+            var card =      $('<div>').attr('class', 'card'),
+                bg =        $('<div>').attr('class', 'user-bg'),
+                img =       $('<img>', { src: tweet.user.profile_image_url }).attr('class', 'user-img'),
                 linkedImg = $('<a>').attr({
-                                        'href': 'https://twitter.com/' + tweet.user.screen_name,
-                                        'target': '_blank',
-                                        'class': 'img-link'
-                                    }).html(img),
+                                'href': 'https://twitter.com/' + tweet.user.screen_name,
+                                'target': '_blank',
+                                'class': 'img-link'
+                            }).html(img),
                 tweetText = $('<span>').attr('class', 'user-text').html(richText),
                 tweetContainer = $('<div>').attr('class', 'user-tweet'),
                 cardLeft;
