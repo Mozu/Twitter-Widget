@@ -2,7 +2,7 @@
 
 ## What's this?
 
-This is a widget that renders a Twitter feed on your Mozu site, as described in this [blog post](http://www.need.link.to.post).
+This is a widget that renders a Twitter feed on your Mozu site, as described in this [blog post](//www.mozu.com/blog/creating-a-custom-widget-with-mozu/.
 
 >**Note:** This widget is meant as an example only. You can use the process described in the blog post as a guideline for creating your own custom widgets for your Mozu site. This widget will not be maintained by the Core Mozu Team and is not meant for production use.
 
@@ -23,7 +23,7 @@ to **YOUR_THEME/scripts/widgets/twitter-feed.js**
 
 2. After adding the files, run `grunt` to build your minified assets.
 
-**Refer to the [blog post](http://www.need.link.to.post) for more information about installation and widget customization**
+**Refer to the [blog post](//www.mozu.com/blog/creating-a-custom-widget-with-mozu/) for more information about installation and widget customization**
 
 ### Use the Widget
 
