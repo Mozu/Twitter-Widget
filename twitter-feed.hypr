@@ -1,0 +1,23 @@
+<div class="custom-widget-twitter-feed">
+    {% comment %}
+        Dump with widget information into a Div using a data attribute so it can be accessed by JavaScript
+    {% endcomment %}
+    <div data-twitter-feed-json="{{model.config}}"></div>
+
+    <div class='container'>
+        <div class='loading'>
+            <span>Loading Tweets</span>
+            <span class="ellipsis">
+                <span class='one'>.</span><span class='two'>.</span><span class='three'>.</span>
+            </span>
+        </div>
+    <div>
+
+    <div class='feed'></div>
+
+</div>
+
+{% comment %}
+    Include our Widget JavaScript -- full path is THEME_NAME/scripts/widgets/twitter-feed.js
+{% endcomment %}
+{% require_script 'widgets/twitter-feed' %}

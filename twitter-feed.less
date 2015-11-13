@@ -1,0 +1,166 @@
+@name-space: custom-widget;
+@backgroundColor: #fff;
+
+.@{name-space}-twitter-feed {
+
+    .container {
+        padding: 10px 16px;
+        font-size: 24px;
+
+        .feed {
+
+            .card {
+                background: @backgroundColor;
+                border: 1px solid #eee;
+                border-radius: 12px;
+                float: left;
+                font-size: 19px;
+                margin: 8px 0;
+                overflow: hidden;
+                width: 100%;
+
+                .user-bg {
+                    border-bottom-left-radius: 12px;
+                    border-top-left-radius: 12px;
+                    display: block;
+                    float: left;
+                    padding-bottom: 8px;
+                    position: relative;
+                    min-height: 140px;
+                    width: 25%;
+                    z-index: 2;
+
+                    .img-link {
+                        float: right;
+                        margin-right: -35px;
+                        margin-top: 37px;
+                    }
+
+                    .user-img {
+                        border-radius: 90px;
+                        border: 6px solid #fff;
+                        box-shadow: 0 0 1px 1px #eee, 0 0 1px 1px #2e2e2e inset;
+                        display: block;
+                        float: left;
+                        height: 60px;
+                        overflow: hidden;
+                        width: 60px;
+                    }
+                }
+
+                .user-tweet.with-img {
+                    min-height: 140px;
+                    width: 75%;
+                }
+
+                .user-tweet.no-img {
+                    min-height: auto;
+                    width: 100%;
+                }
+
+                .user-tweet.profile-img {
+                    min-height: 82px;
+                    width: 100%;
+
+                    .lone-img {
+                        display: block;
+                        float: left;
+                        height: 60px;
+                        margin: 10px;
+                        padding-right: 10px;
+                        width: 60px;
+
+                        img {
+                            border: 6px solid #fff;
+                            box-shadow: 0 0 0 1px #eee, 0 0 0 1px #eee inset;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .user-tweet {
+                    background-color: #fff;
+                    display: block;
+                    float: left;
+                    padding-bottom: 5px;
+                    position: relative;
+                    z-index: 1;
+
+                    .user-text {
+                        display: block;
+                        padding: 10px;
+                        margin-left: 40px;
+
+                        a {
+                            color: #00aeea;
+                            border-radius: 4px;
+                            padding: 0 4px;
+                            text-decoration: none;
+                        }
+
+                        a:hover {
+                            background: #00aeea;
+                            border-bottom: 3px solid #00aeea;
+                            color: #fff;
+                        }
+                    }
+
+                    .user-text.profile-img {
+                        margin-left: 82px;
+                    }
+                }
+            }
+
+            .card:hover .user-tweet{
+                border-bottom: 8px solid #00aeea;
+                padding-bottom: 0;
+            }
+        }
+
+        .ellipsis {
+
+            .one {
+                animation: dot 1.3s infinite;
+                animation-delay: 0.0s;
+                opacity: 0;
+            }
+
+            .two {
+                opacity: 0;
+                animation: dot 1.3s infinite;
+                animation-delay: 0.2s;
+            }
+
+            .three {
+                animation: dot 1.3s infinite;
+                animation-delay: 0.3s;
+                opacity: 0;
+            }
+
+            @-webkit-keyframes dot {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes dot {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
